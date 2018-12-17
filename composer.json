@@ -23,5 +23,15 @@
         "psr-4": {
             "TkachevO\\LaravelYandexMoney\\": "src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TkachevO\\LaravelYandexMoney\\YandexMoneyServiceProvider"
+            ],
+            "aliases": {
+                "YandexMoney": "TkachevO\\LaravelYandexMoney\\Facades\\YandexMoney"
+            }
+        }
     }
 }
