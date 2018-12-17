@@ -1,0 +1,23 @@
+# phpstorm project files
+.idea
+
+# windows thumbnail cache
+Thumbs.db
+
+# mac DS_Store Files
+.DS_Store
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# composer.lock is not needed
+composer.lock
+
+# local phpunit config
+/phpunit.xml
+
+# phpunit itself is not needed
+phpunit.phar

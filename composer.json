@@ -1,0 +1,27 @@
+{
+    "name": "tkachev-o/laravel-yandex-money",
+    "description": "ServiceProvider для интеграции Yandex.Money API SDK (https://github.com/yandex-money/yandex-money-sdk-php).",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Tkachev",
+            "email": "tkachev.go@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/yandex-money/yandex-money-sdk-php"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "illuminate/support": "5.5.*|5.6.*|5.7.*",
+        "yandex-money/yandex-money-sdk-php": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "TkachevO\\LaravelYandexMoney\\": "src"
+        }
+    }
+}
