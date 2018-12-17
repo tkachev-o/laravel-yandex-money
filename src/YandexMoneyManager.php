@@ -19,7 +19,7 @@ class YandexMoneyManager
      *
      * @var \YandexMoney\API
      */
-    protected $api;
+    protected $client;
 
     /**
      * Create a new manager instance.
@@ -48,12 +48,28 @@ class YandexMoneyManager
      */
     public function getClient()
     {
-        if (!$this->api instanceof API) {
-            $this->api = new API(
+        if (!$this->client instanceof API) {
+            $this->client = new API(
                 $this->config->get('yandexmoney.access_token')
             );
         }
-        return $this->api;
+        return $this->client;
+    }
+
+    /**
+     * Magic call method
+     *
+     * @param $method
+     * @param $arguments
+     *
+     * @return mixed
+     */
+    public function __call($method, $arguments)
+    {
+        if (method_exists($this->client, $method)) {
+            return call_user_func_array([$this->client, $method], $arguments);
+        }
+        throw  new \BadMethodCallException(sprintf('Method [%s] does not exist.', $method));
     }
 
 }
