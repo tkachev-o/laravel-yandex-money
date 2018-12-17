@@ -50,7 +50,7 @@ class YandexMoneyManager
     {
         if (!$this->api instanceof API) {
             $this->api = new API(
-                $this->config->get('yandex.money.client.id')
+                $this->config->get('yandex.money.access.token')
             );
         }
         return $this->api;
