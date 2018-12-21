@@ -17,7 +17,7 @@ composer.phar
 composer.lock
 
 # local phpunit config
-/phpunit.xml
+#/phpunit.xml
 
 # phpunit itself is not needed
 phpunit.phar

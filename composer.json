@@ -19,9 +19,24 @@
         "illuminate/support": "5.5.*|5.6.*|5.7.*",
         "yandex-money/yandex-money-sdk-php": "dev-master"
     },
+    "require-dev": {
+        "graham-campbell/testbench": "^5.1",
+        "phpunit/phpunit": "^7.5",
+        "mockery/mockery": "^1.2"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
     "autoload": {
         "psr-4": {
             "TkachevO\\LaravelYandexMoney\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TkachevO\\Tests\\LaravelYandexMoney\\": "tests/"
         }
     },
     "extra": {
